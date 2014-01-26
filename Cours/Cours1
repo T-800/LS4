@@ -20,6 +20,11 @@ Introduction à Python
          - Flottans
          - Complexes
 
+
+         VARIABLES :
+            Elles sont typés dynamiquement, lorsqu'une valeur est affecté a une variable l'interpréteur en deduit son type.
+            la fonction 'type(var)' donne le type de la variable 'var'
+
          BOOLEAN :
             Valeurs True,   False
 
@@ -36,4 +41,51 @@ Introduction à Python
               En python la variable a est differente de la variable A
 
          FLOTTANS :
+            Les flottans sont codés comme en 'C' avec le Signe la Mantisse et l'Exposant.
+            f = (-1)^S * M * 2^(E-127)
+
+            ex:
+               >>> a = 3.
+               >>> b = 7e3             # b est égal à 7 * 10^3
+               >>> c = 0.00004
+
+            ATTENTION : Selon le calcul avec lequel on obtien un flottant celui ci peut être codé differanment.
+            On ne peut donc pas en tester l'égalité
+            ex :
+               >>> (.1 + .1 + .1 ) == .3        #ce test dégalité revoi False
+
+         COMPLEXES :
+            >>> a = 2+6j               # est equivalent à a = 2+6J
+
+         OPÉRATIONS :
+            +        addition
+            -         soustraction
+            *        mutiplication
+            **       puissance
+            /          division (renvoi un flottan)
+            //         division entière (renvoi un entier)
+            %        reste de la division entière
+
+      3)  Conditionnelles:
+         En python l'indentation est obligatoire elle est de 4 espaces
+
+         IF :
+            Structure :
+               if (condition1) :
+                     Instruction1
+                     Instruction1
+
+               elif (condition2) :
+                     Instruction3
+
+               else :
+                     Instruction4
+
+         Boucle WHILE :
+            while (condition1) :
+                  Instruction1
+
+      4) Script
+         Soit le fichier main.py un programme python. Pour l'éxécuter
+            > pythonX.X main.py
 

@@ -32,15 +32,15 @@ y = tmp
 x, y = y, x
 #1.2 Int et Float
 # Question 1
-type(3/4)
-type(4/2)
-type(3//4)
-type(4//2)
-type(3.14)
-type(10.)
-type(1e10)
-type(3** 2)
-type(3** (1/2))
+print(type(3/4))
+print(type(4/2))
+print(type(3//4))
+print(type(4//2))
+print(type(3.14))
+print(type(10.))
+print(type(1e10))
+print(type(3** 2))
+print(type(3** (1/2)))
 #res
 r = 19875+77569 % 7
 #res
@@ -55,45 +55,86 @@ print(round(.1, 1)+round(.1, 1)+round(.1, 1) == round(.3, 1))
 print(round(.1+.1+.1, 1) == round(.3, 1))
 #1.3 Fonctions
 #Question 2
-def f(y):
-    """a"""
+def f(d):
+    """f"""
     z = 0
-    while y != 0:
+    while d != 0:
         z = z + 3
-        y = y -1
+        d = d -1
     return z
 #res
-f(0)
-f(3)
-f(5)
-f(8)
+print(f(0))
+print(f(3))
+print(f(5))
+print(f(8))
 #res
 # Question 3
-def f1(x) :
-    y = 2*x
-    x= x+3
-    x = y - x
-    return (x,y)
+def f1(e):
+    """f1"""
+    g = 2*e
+    e = e+3
+    e = g - e
+    return (e, g)
+#res
 print(f1(5))
-def f2(x) :
-    y = 2 * x
-    x = y - x
-    x = x + 3
-    return (x,y)
+#res
+def f2(h):
+    """f2"""
+    j = 2 * h
+    h = j - h
+    h = h + 3
+    return (h, j)
+#res
 print(f2(5))
-def f3(x) :
-    x = x + 3
-    y = 2 * x
-    x = y - x
-    return (x,y)
-f3(5)
+#res
+
+def f3(k):
+    """f3"""
+    k = k + 3
+    l = 2 * k
+    k = l - k
+    return (k, l)
+#res
+print(f3(5))
+#res
+# Question 4
 Flag = True
-def ff(x, y) :
+def ff(m, n):
+    """ff"""
     global Flag
-    x = x-2
-    Flag = (x>y)
-    return (x,y,Flag)
-(a,b,c) = ff(7,2)
-print(a,b,c)
-(r,s,t) = ff(2,2)
-print(r,s,t)
+    m = m-2
+    Flag = (m > n)
+    return (m, n, Flag)
+
+#res
+(a, b, c) = ff(7, 2)
+print(a, b, c)
+(r, s, t) = ff(2, 2)
+print(r, s, t)
+#res
+
+Flag2 = True
+def fff(o, p):
+    """fff"""
+    o = o - 2
+    Flag2 = (o > p)
+    return (o, p, Flag)
+
+(a, b, c) = fff(7, 2)
+(r, s, t) = fff(2, 2)
+print(Flag)
+print(a, b, c)
+print(r, s, t)
+
+def ffff(q, u):
+    """fff"""
+    q = q - 2
+    Flag2 = (q > u)
+    return (q, u, Flag)
+
+(a, b, c) = ffff(7, 2)
+(r, s, t) = ffff(2, 2)
+
+print(Flag)
+print(a, b, c)
+print(r, s, t)
