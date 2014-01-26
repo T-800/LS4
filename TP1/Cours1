@@ -1,0 +1,39 @@
+LS4 23/01/2014
+Anne Micheli   anne.micheli@liafa.univ-paris-diderot.fr
+
+Introduction à Python
+   1) Langage de script
+      Définition : Un langage de script est un langage dans lequel un programme écrit n'a pas besoin d'être compilé pour être éxécuté.
+      Cela signifie qu'il éxéste un programme appelé interpréteur qui est capable de comprendre et d'éxécuter des programme écrit dans ce langage.
+
+      Un langage de script permet d'écrire de petit programme de façon simple et donc rappidement
+
+      Python est un langage de script avec un interpreteur interactif
+
+      Pour lancer linterpreteur :
+      > pythonX.X (X.X est la version de python qu'on souhaite utiliser "dans ce cours la 3.1" )
+
+   2) Structure de donnés primitif
+      Les types primitifs de Python son les :
+         - Boolean
+         - Entiers
+         - Flottans
+         - Complexes
+
+         BOOLEAN :
+            Valeurs True,   False
+
+            Les tests utilises les opérateurs suivants :   ==, !=, >, >=, <, <=
+
+         ENTIERS :
+            Les entiers peuvent prendre des valeurs aussi grandes (petites) que l'on veut
+            L'affectation se fait a l'aide du symbole "=" de la droite vers la gauche
+            ex :
+               >>> a = 3            # a est égal à 3
+               >>> 3 = a            # Erreur
+               >>> a, b = 3, 4    # a est égal à 3 et b est égal à 4
+
+              En python la variable a est differente de la variable A
+
+         FLOTTANS :
+
