@@ -22,8 +22,18 @@ Introduction à Python
 
 
          VARIABLES :
-            Elles sont typés dynamiquement, lorsqu'une valeur est affecté a une variable l'interpréteur en deduit son type.
-            la fonction 'type(var)' donne le type de la variable 'var'
+            Elles sont typées dynamiquement, lorsqu'une valeur est affecté a une variable interpréteur en deduit sont type.
+            La fonction :
+               >>> type(var)
+            donne le type de la variable var
+            ex :
+
+               >>> a = 20
+               >>> type(a)
+                  <class 'int'>
+               >>> a = "chaine"
+               >>> type(a)
+                  <class 'str'>
 
          BOOLEAN :
             Valeurs True,   False
@@ -49,8 +59,8 @@ Introduction à Python
                >>> b = 7e3             # b est égal à 7 * 10^3
                >>> c = 0.00004
 
-            ATTENTION : Selon le calcul avec lequel on obtien un flottant celui ci peut être codé differanment.
-            On ne peut donc pas en tester l'égalité
+            ATTENTION : Selon le calcul dont on obtient un flottant celui-ci peut être encodé de façon differente.
+            On ne peut dont pas tester l'egalité (inégalité) des flottant de façcon précise
             ex :
                >>> (.1 + .1 + .1 ) == .3        #ce test dégalité revoi False
 
@@ -88,4 +98,3 @@ Introduction à Python
       4) Script
          Soit le fichier main.py un programme python. Pour l'éxécuter
             > pythonX.X main.py
-
