@@ -57,7 +57,7 @@ def suffixe(s,n):
 print("suffix('',0) = "+suffixe('',0))
 print("suffix('suffixe',3) = "+suffixe('suffixe',3))
 print("suffix('a',0) = "+suffixe('a',0))
-print("suffix('a',3) = "+suffixe('a',3))
+print("suffix('a',3) = "+str(suffixe('a',3)))
 print("suffix('a',3) = "+str(suffixe('a',3)))
 
 def miroir(s):
@@ -67,7 +67,7 @@ print("miroir('reflet') = "+miroir('reflet'))
 
 def palindrome(s):
     return s == s[::-1]
-print("palindrome('mon nom') = "+palindrome('mon nom'))
+print("palindrome('mon nom') = "+str(palindrome('mon nom')))
 print("palindrome('mon nom') = "+str(palindrome('mon nom')))
 print("palindrome('my name') = "+str(palindrome('my name')))
 
@@ -306,7 +306,7 @@ def pi_2_6d(n):
 
 T = []
 for i in range(1,6):
-    T.append(pi_2_6d(math.pow(10,i))-pi_2_6a(math.pow(10,i)))
+    T.append(pi_2_6a(math.pow(10,i))-pi_2_6d(math.pow(10,i)))
 
 print(str(T))
 
@@ -321,7 +321,6 @@ for k in l:
 
 m = s/c
 
-print("c = "+c)
 print("c = "+str(c))
 print("s = "+str(s))
 print("l = "+str(l))
