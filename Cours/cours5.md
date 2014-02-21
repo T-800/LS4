@@ -5,7 +5,6 @@ Anne Micheli   anne.micheli@liafa.univ-paris-diderot.fr
 
 Pour manipuler les fichiers en Python Il y a un type spécial et on crée un objet de ce type de la façon suivante :
 
-    #!/usr/bin/python
     f = open(<ref> [, mode=<opt>, encoding=<encodage>])
 
 
@@ -15,9 +14,9 @@ Les differents modes possibles:
 * "a" ouverture en mode écriture a la fin du fichier.
 
 L'encodage peut-être  modifier (par défaut celui su shell dans lequel est lancé l'interpréteur python)
-* ex : encoding='utf-8'
+*ex* : `encoding='utf-8'`
 
-    f = open('mon_fichier')
+    f = open('mon_fichier', encoding='utf-8')
 
 Si le fichier 'mon_fichier' n'éxiste pas ou si l'ouverture ne peut se faire  open leve une exeption de type IOError.
 
@@ -38,18 +37,25 @@ Pour l'ouverture avec le mode 'a' f pointe alors a la fin du fichier
 
 ##Lecture
 Pour lire, il y à les methodes :
-* read() :
-    f.read(n)       # on lit les n char(octets) à partir de la position du curseur et le place ensuite n char(octet) plus loin
+*read()*:
 
-* readline()  :
-    f.readline()    # on lit une ligne de la position du curseur jusqu'à la fin de la ligne (\n)
+    f.read(n)
+>On lit les n char(octets) à partir de la position du curseur et le place ensuite n char(octet) plus loin
 
-* readlines()
-    for ligne in readlines():       # la fin de la boucle le curseur est placé a la fin du fichier
+*readline()*  :
+
+    f.readline()
+>On lit une ligne de la position du curseur jusqu'à la fin de la ligne (\n)
+
+*readlines()*
+
+    for ligne in readlines():
             print(ligne)
+>La fin de la boucle le curseur est placé a la fin du fichier
 
 ## Écriture
-   f = open("fichier.txt", "w")
+
+    f = open("fichier.txt", "w")
 
     f.write("blabla")       # ecrit la chaine après la position du curseur et la modifie
     f.write(str())
@@ -58,16 +64,19 @@ Pour lire, il y à les methodes :
 ### seek:
 La methode seek() permet changer la position du curseur
 
-        seek(<position en nombre d'octet>, constante=0)
+        seek(<position en nombre d'octet> [, SEEK_* ])
 
-**SEEK_SET or 0**: seek from the start of the stream (the default); offset must either be a number returned by TextIOBase.tell(), or zero. Any other offset value   produces undefined behaviour.
+Change la position du curseur en lui donnant un nombre d'octet. Le deplacement est calculer relativement par rapport a la contante
 
-**SEEK_CUR or 1**: “seek” to the current position; offset must be zero, which is a no-operation (all other values are unsupported).
+####Contantes
 
-**SEEK_END or 2**: seek to the end of the stream; offset must be zero (all other values are unsupported).
+**SEEK_SET or 0** : Début du fichier (par defaut); la position doit être 0 ou positive
 
-        Return the new absolute position as an opaque number.
+**SEEK_CUR or 1** : Position courrante du curseur; position positive ou négative
 
+**SEEK_END or 2** : Fin du fichier; position généralement négative
+
+retourne la nouvelle postition du curseur
 ### tell:
         La methode tell() permet connaitre la position du curseur
 
