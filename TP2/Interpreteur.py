@@ -44,6 +44,7 @@ def prefixe(s, n):
         return False
     else :
         return s[:n]
+
 print("prefix('',0) = "+prefixe('',0))
 print("prefix('prefix',3) = "+str(prefixe('prefix',3)))
 print("prefix('a',1) = "+str(prefixe('a',1)))

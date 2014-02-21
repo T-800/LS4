@@ -1,0 +1,54 @@
+a = {}
+print(type(a))
+a = ()
+print(type(a))
+a = []
+print(type(a))
+a = ''
+print(type(a))
+a = 5, 3, 'bla', [1,2,3]
+print(type(a))
+a = 'bla'
+print(type(a))
+a = 'bla',
+print(type(a))
+a = ['bla']
+print(type(a))
+a = {'bla'}
+print(type(a))
+t = [1, 3, 5, 8]
+a = {t}
+a = {e:i for i,e in enumerate(t)}
+print(type(a))
+a
+d = {'mot':3, 'mots':4, 'maux:4}
+d = {'mot':3, 'mots':4, 'maux':4}
+a = {f for f in d.values()}
+print(type(a))
+a
+a = [f for f in d.keys()}][0]
+a = [f for f in d.keys()}[0]
+a = {f for f in d.keys()}[0]
+a = [f for f in d.keys()][0]
+a
+print(type(a))
+a = [m,f for m,f in d.items()][-1]
+a = [m,f for m,f in d.items()}][-1]
+a = [m,f for m,f in d.items()][-1]
+a = {}
+print(type(a))
+a = []
+print(type(a))
+a = '
+a = ''
+print(type(a))
+a = ['bla']
+print(type(a))
+a = {'bla'}
+print(type(a))
+t = [1, 3, 5, 8]
+a = set(t)
+print(type(a))
+t = [1, 3, 5, 8]
+a = {e:i for i,e in enumerate(t)}
+print(type(a))
