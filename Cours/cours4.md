@@ -12,7 +12,7 @@ Collection d'objets qui peuvent être distincts non mutable
 On peut itérer sur un uplet
 
     >>> type(u[3])                                     # renvoi "list"
-    >>> u[3][0]                                          # renvoi 'a'
+    >>> u[3][0]                                        # renvoi 'a'
 
 #Les ensembles (set):
 
@@ -24,7 +24,7 @@ Collection non ordonnée d'objet non mutable (mais on peut modifier l'ensemble) 
     >>> s                                              # renvoi set()
 
     >>> s2 = set(['a', 4, 18, 'bonjour'])
-    >>> s2                                              # {'a', 4, 18, 'bonjour'}
+    >>> s2                                             # {'a', 4, 18, 'bonjour'}
 
     >>> s3 = set([(1, 2, 3)])
     >>> s3                                             # {(1,2,3)}
@@ -35,7 +35,7 @@ On peut modifier un ensemble :
     >>> s4.remove(4)
 
 
-    >>> 2 in s4                                        # True
+    >>> 2 in s4                                  # True
     >>> 'bonjour' not in s4                      # True
 
 On peut réaliser
@@ -47,7 +47,6 @@ On peut réaliser
 ###l'intersection : intersection, &
 
     >>> s = s1.intersection(s2)
-
     >>> s = s1 & s2
 
 ###la diference: difference, -
@@ -59,7 +58,6 @@ On peut réaliser
 ###la diference symetrique (ou éclusif): difference, -
 
     >>> s = s1.symmetric_difference(s2)
-
     >>> s = s1 ^ s2
 
 
@@ -74,12 +72,24 @@ Un dico est un ensemble de couple clé, valeur où :
     >>> dico = {}
 
     >>> dico = dict(zip(['ensemble', 'uplet'], [{'set', 'together'},'tuple']))
+    >>> dico                # {'uplet': 'tuple', 'ensemble': {'set', 'together'}}
+
     >>> dico = {c:v for (c,v) in zip(range(4), ['a','b','c','d'])}
+    >>> dico                # {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
+
+### Attention à la taille des listes
+
+    >>> dico = {c:v for (c,v) in zip(range(5), ['a','b','c','d'])}
+    >>> dico                # {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
+
+    >>> dico = {c:v for (c,v) in zip(range(4), ['a','b','c','d','e'])}
+    >>> dico                # {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
+
 
 ##Acces et modification :
 
-    >>> dico ['uplet']                             # tuple
-    >>> dico ['liste'] = 'list'                    # ajout le couple liste:list
+    >>> dico ['uplet']                     # tuple
+    >>> dico ['liste'] = 'list'            # ajout le couple liste:list
     >>> dico ['ensemble'] = 'ens'          #modifie l'entrée ensemble
 
 ##Les vues (views) :
@@ -89,14 +99,14 @@ la vue dict_keys est un objet faisant référence aux clés d'un dictionnaire
 
 la vue dict_values est un objet faisant référence aux valeurs d'un dictionnaire
 
-    >>> dico.values()                  # objet dict_values('ens','tuple','lst')
+    >>> dico.values()                # objet dict_values('ens','tuple','lst')
 
 la vue dict_items est un objet faisant référence aux couples clés,valeurs d'un dictionnaire
 
     >>> dico.items()                  # objet dict_items(('ensemble','ens'),('uplet','tuple'),(liste,'lst'))
 
+Les opérateurs ensemblistes `|,&,-,^` s'applique aussi aux vues
 
-###les vues sont des objets itérables. De plus si on modifie le dictionnaire correspondant, les vues sont modifiers et inversement.
+***les vues sont des objets itérables. De plus si on modifie le dictionnaire correspondant, les vues sont modifiers et inversement.***
 
-###Les opérateurs ensemblistes |,&,-,^ s'applique aux vues
 
