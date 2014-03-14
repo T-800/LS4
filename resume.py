@@ -42,7 +42,9 @@ def TriSelection(T):
 
     return T
 
+
 # Fusion 1
+
 def fusion(T, bg, m, bd):
     t1 = T[bg:m]
     t2 = T[m:bd+1]
@@ -97,6 +99,42 @@ def tri_fusion(T, debut, fin) :
         gauche = tri_fusion(T, debut, milieu)
         droite = tri_fusion(T, milieu, fin)
         return fusion(gauche, droite)
+
+
+# Rapide
+
+def pivote(T, bg, bd):
+    '''
+        Le pivot est bg
+    '''
+    global TmpComp
+    while bg < bd:
+        while bg < bd:
+            TmpComp += 1
+            if T[bg] > T[bd]:
+                T[bg], T[bd] = T[bd], T[bg]
+                break
+            bd = bd - 1
+        while bg < bd:
+            TmpComp += 1
+            if T[bg] > T[bd]:
+                T[bg], T[bd] = T[bd], T[bg]
+                break
+            bg = bg + 1
+    return bg
+
+
+def trirapide(T, bg=0, bd=-1):
+    '''
+        trirapide(T): tri rapide (quicksort) de la liste T
+    '''
+    if bd == -1:
+        bd = len(T)-1
+    if bg < bd:
+        i = pivote(T, bg, bd)
+        trirapide(T, bg, i)
+        trirapide(T, i+1, bd)
+
 
 ## LISTES
 

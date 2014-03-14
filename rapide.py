@@ -9,14 +9,12 @@ def pivote(T, bg, bd):
     '''
     global TmpComp
     while bg < bd:
-        # The partition use the first element of the range as pivot
         while bg < bd:
             TmpComp += 1
             if T[bg] > T[bd]:
                 T[bg], T[bd] = T[bd], T[bg]
                 break
             bd = bd - 1
-        # The partition use the last element of the range as pivot
         while bg < bd:
             TmpComp += 1
             if T[bg] > T[bd]:
