@@ -70,24 +70,6 @@ def tri_rapide(T,canvas, bg=0, bd=-1):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 fenetre = tkinter.Tk()
 quitter = tkinter.Button(fenetre, text="Quitter", command=fenetre.destroy).pack()
 canvas = tkinter.Canvas(fenetre,width=400,height=400,background="white")

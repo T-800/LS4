@@ -5,7 +5,7 @@ class Arbre(object):
 
     profondeur_max = 0
 
-    def __init__(self, arbre=None, liste=None, nb_Noeud=-1):
+    def __init__(self, arbre=None, liste=None, nb_arrete=-1):
         '''
             Comme on ne peut pas definir plusieur contructeur pour notre Objet(!= java)
             et on a besoin de deux façon de contruir le module soit le fichier arbre soi le fichier liste poids
@@ -23,11 +23,16 @@ class Arbre(object):
 
         elif liste:
             #appel pour la contruction a partir d'un fichier de poids
-            #self.constuct_Liste(liste,nb_Noeud)
+            self.constuct_Liste(liste,nb_arrete)
             pass
         else:
             # autre contructeur OU ERREUR
             pass
+        if self.sous_arbre:
+            for elt in self.sous_arbre:
+                self.poids += elt.poids
+
+        Arbre.profondeur_max = max(Arbre.profondeur_max,self.profondeur())
 
     def __repr__(self):
 
@@ -51,10 +56,6 @@ class Arbre(object):
                 self.sous_arbre += [Arbre(arbre=elt)]
 
 
-            for elt in self.sous_arbre:
-                self.poids += elt.poids
-
-            Arbre.profondeur_max = max(Arbre.profondeur_max,self.profondeur())
             #print("\nINIT")
             #print(self)
             #print("---------\n")
@@ -70,8 +71,17 @@ class Arbre(object):
                 la liste est diviser en nb sous- liste
                 cette foction est appeler recursivement sur les nb sous liste
         '''
-        pass
+        if nb == 2:
+            if len(liste) >= 2:
+                liste1 = liste[:len(liste)//2]
+                liste2 = liste[len(liste)//2:]
 
+                if not self.sous_arbre:
+                    self.sous_arbre = []
+                self.sous_arbre += [Arbre(liste=liste1,nb_arrete=2)]
+                self.sous_arbre +=[Arbre(liste=liste2,nb_arrete=2)]
+            else:
+                self.poids = liste[0]
 
     def calcule_ecarts_tiges():
         '''
@@ -117,14 +127,30 @@ class Arbre(object):
 
 
 
+'''
+fic2 = open("fic2")
+liste1 = fic2.readlines()
+liste1 = [int(i) for i in liste1]
+liste1.sort()
+print(liste1)
+#liste1 = eval(liste1)
+a = Arbre(liste=liste1,nb_arrete=2)
+a.calcul_longueur()
+a.afficheArbre()
+print("profondeur "+str(a.profondeur()))
+print("profondeur_max "+str(a.profondeur_max))
 
-fic = open("fic")
 
-liste1 = fic.readline()
+
+
+
+fic1 = open("fic")
+liste1 = fic1.readline()
 liste1 = eval(liste1)
-
 a = Arbre(liste1)
 a.calcul_longueur()
 a.afficheArbre()
 print("profondeur "+str(a.profondeur()))
 print("profondeur_max "+str(a.profondeur_max))
+
+'''
