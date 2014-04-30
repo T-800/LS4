@@ -43,7 +43,7 @@ def melange(n):
         T[i], T[rand] = T[rand], T[i]
     return T
 
-Tab = melange(100)
+Tab = melange(1000)
 TmpComp = 0
 print(Tab)
 trirapide(Tab)
