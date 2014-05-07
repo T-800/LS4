@@ -41,7 +41,7 @@ def popUp(fr):
     fr.radio_var = StringVar(fr.popup)
     fr.radio_var.set(1)
     binaire = Radiobutton(fr.popup, text='Binaire', variable=fr.radio_var, value=1,
-                          command=lambda: select_Naire(fr)).grid(row=0, column=0, sticky=W)
+                          command=lambda: select_Naire(fr)).gridn (row=0, column=0, sticky=W)
     naire = Radiobutton(fr.popup, text='N-aire', variable=fr.radio_var, value=2,
                         command=lambda: select_Naire(fr)).grid(row=0, column=1, sticky=W)
 
