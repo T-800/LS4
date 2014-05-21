@@ -8,6 +8,6 @@ if __name__ == "__main__":
 
     interface = Interface(master=root)
     interface.master.title("Projet Python 2014")
-    #interface.master.title("The Master")
+    """interface.master.title("The Master")"""
     interface.pack(fill="both", expand=True)
     interface.mainloop()

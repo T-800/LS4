@@ -18,12 +18,14 @@ def tri_insertion(T):
 
 
 T = [2, 4, 1, 9, 8, 3, 7]
+'''
 #print(Inserer(T, 0))  # [2, 4, 1, 9, 8, 3, 7]
 #print(Inserer(T, 1))  # [2, 4, 1, 9, 8, 3, 7]
 #print(Inserer(T, 2))  # [1, 2, 4, 9, 8, 3, 7]
 #print(Inserer(T, 3))  # [1, 2, 4, 9, 8, 3, 7]
 #print(Inserer(T, 4))  # [1, 2, 4, 8, 9, 3, 7]
 #print(Inserer(T, 5))  # [1, 2, 3, 4, 8, 9, 7]
+'''
 tmpComp = 0
 tmpEc = 0
 tri_insertion(T)

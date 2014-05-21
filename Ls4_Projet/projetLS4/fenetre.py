@@ -317,4 +317,3 @@ class Interface(Frame):
 
         Bouton_A = Button(self.popup, text="Annuler", command=self.popup.destroy).grid(row=2, column=3, sticky=W)
         Bouton_OK = Button(self.popup, text="OK", command=self.action_menu_arbre).grid(row=2, column=4, sticky=E)
-

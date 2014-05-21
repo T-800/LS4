@@ -1,5 +1,6 @@
 #! /usr/bin/python3
 
+
 def IndiceMin(tab, i):
     global tmpCom
     if i < 0 or i > len(tab):

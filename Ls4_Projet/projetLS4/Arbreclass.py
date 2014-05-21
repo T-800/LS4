@@ -114,7 +114,7 @@ class Arbre:
                 den += elt.poids
 
             self.barycentre = round(num/den, 3)
-            for elt in self.sous_arbre:é a a
+            for elt in self.sous_arbre:
                 elt.calcul_barycentre()
 
     def getMinX(self):
